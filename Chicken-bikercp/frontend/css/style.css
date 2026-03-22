@@ -39,7 +39,6 @@ body {
     /* FORMA: Esquinas derechas redondeadas */
     border-radius: 0 150px 150px 0;
     
-    /* BORDE AZUL: En la parte superior, derecha e inferior */
     border-top: 1px solid #010509;
     border-right: 1px solid #010102;
     border-bottom: 1px solid #010102;
@@ -179,7 +178,7 @@ body {
 /* --- RESPONSIVE --- */
 @media (max-width: 850px) {
     .left-panel {
-        display: none; /* Ocultamos el panel izquierdo en móviles para priorizar el login */
+        display: none; 
     }
     
     .right-panel {
