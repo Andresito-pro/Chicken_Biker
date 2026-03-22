@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Movimiento - Chicken Biker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <form class="registro-form" method="POST">
+            <h2>Movimiento</h2>
+            <div class="linea-decorativa"></div>
+
+            <div class="input-group">
+                <label for="fechaMvCaja" class="labels">Fecha del Movimiento</label>
+                <input type="date" name="fechaMvCaja" id="fechaMvCaja" required>
+
+                <label for="valorMvCaja" class="labels">Valor ($)</label>
+                <input type="number" step="0.01" name="valorMvCaja" id="valorMvCaja" placeholder="Ej: 50000" required>
+
+                <label for="idTipoMovimiento" class="labels">Tipo de Movimiento</label>
+                <select name="idTipoMovimiento" id="idTipoMovimiento" required>
+                    <option value="" disabled selected>Seleccione el tipo</option>
+                    <option value="1">Ingreso (Entrada)</option>
+                    <option value="2">Egreso (Gasto/Salida)</option>
+                </select>
+
+                <label for="idAperturaCierreCaja" class="labels">Sesión de Caja Actual</label>
+                <select name="idAperturaCierreCaja" id="idAperturaCierreCaja" required>
+                    <option value="" disabled selected>Seleccione la sesión activa</option>
+                    </select>
+
+                <label for="descripcionMvCaja" class="labels">Descripción / Motivo</label>
+                <textarea name="descripcionMvCaja" id="descripcionMvCaja" placeholder="Ej: Compra de insumos de emergencia" rows="3"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-registro">Registrar</button>
+                <a href="dashboard.html" class="btn btn-login">Volver</a>
+            </div>
+
+            <div class="form-footer">
+                <a href="#">Ver historial</a>
+                <span>|</span>
+                <a href="#">Reportar descuadre</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Pedido - Chicken Biker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <form class="registro-form" method="POST">
+            <h2>Registrar Pedido</h2>
+            <div class="linea-decorativa"></div>
+
+            <div class="input-group">
+                <label for="fechaPedido" class="labels">Fecha del Pedido</label>
+                <input type="date" name="fechaPedido" id="fechaPedido" required>
+
+                <label for="tipoPedido" class="labels">Tipo de Pedido</label>
+                <select name="tipoPedido" id="tipoPedido" required>
+                    <option value="" disabled selected>Seleccione modalidad</option>
+                    <option value="mesa">Consumir en mesa</option>
+                    <option value="llevar">Para llevar / Domicilio</option>
+                </select>
+
+                <label for="idMesa" class="labels">Seleccionar Mesa</label>
+                <select name="idMesa" id="idMesa" required>
+                    <option value="" disabled selected>Elige una mesa</option>
+                    <option value="1">Mesa 01</option>
+                    <option value="2">Mesa 02</option>
+                    <option value="0">N/A (Para llevar)</option>
+                </select>
+
+                <label for="totalPedido" class="labels">Total a Pagar ($)</label>
+                <input type="number" step="0.01" name="totalPedido" id="totalPedido" placeholder="0.00" required>
+
+                <label for="idEstadoPedido" class="labels">Estado del Pedido</label>
+                <select name="idEstadoPedido" id="idEstadoPedido" required>
+                    <option value="" disabled selected>Estado inicial</option>
+                    <option value="1">Pendiente</option>
+                    <option value="2">En preparación</option>
+                    <option value="3">Completado</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-registro">Crear Pedido</button>
+                <a href="dashboard.html" class="btn btn-login">Volver</a>
+            </div>
+
+            <div class="form-footer">
+                <a href="#">Ver comandas activas</a>
+                <span>|</span>
+                <a href="#">Historial de ventas</a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/pedidos.js"></script>
+</body>
+</html>

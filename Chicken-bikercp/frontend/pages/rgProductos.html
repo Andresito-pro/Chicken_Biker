@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - Chicken Biker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+<body>
+
+    <div class="main-container">
+        <form class="registro-form">
+            <h2>Productos</h2>
+            <div class="linea-decorativa"></div>
+
+            <div class="input-group">
+                <label for="nombrePlato" class="labels">Nombre del Producto</label>
+                <input type="text" name="nombrePlato" id="nombrePlato" placeholder="Ej: Hamburguesa Especial" required>
+
+                <label for="descripcion" class="labels">Descripción</label>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción breve del plato o bebida" rows="3"></textarea>
+
+                <label for="precioVenta" class="labels">Precio de Venta ($)</label>
+                <input type="number" name="precioVenta" id="precioVenta" placeholder="0.00" step="0.01" required>
+
+                <label for="categoria" class="labels">Categoría</label>
+                <select name="categoria" id="categoria" required>
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="1">Entradas</option>
+                    <option value="2">Platos Fuertes</option>
+                    <option value="3">Bebidas</option>
+                    <option value="4">Postres</option>
+                </select>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" name="activo" id="activo" checked>
+                    <label for="activo">Producto disponible para la venta</label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-registro">Guardar Producto</button>
+                <a href="inventario.html" class="btn btn-login">Volver</a>
+            </div>
+
+            <div class="form-footer">
+                <a href="#">Gestionar categorías</a>
+                <span>|</span>
+                <a href="#">Ver menú actual</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

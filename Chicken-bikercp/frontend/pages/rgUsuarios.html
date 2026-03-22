@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Chicken Biker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <form class="registro-form">
+            <h2>Crear cuenta</h2>
+            <div class="linea-decorativa"></div>
+
+            <div class="input-group">
+                <label for="Nombre" class="labels">Nombres</label>
+                <input type="text" id="name" placeholder="Nombres" required>
+                <label for="Apellido" class="labels">Apellidos</label>
+                <input type="text" id="last-name" placeholder="Apellidos" required>
+
+                <label for="tipo-documento" class="labels">Tipo de documento</label>
+                <select id="tipo-documento" required>
+                    <option value="" disabled selected>Tipo de Documento</option>
+                    <option value="1">Cédula</option>
+                    <option value="2">NIT</option>
+                    <option value="3">PPT</option>
+                    
+                </select>
+                <label for="documento" class="labels">Documento</label>
+                <input type="text" id="documento" placeholder="Número de documento" required>
+
+                <label for="rol" class="labels">Rol</label>
+                <select id="rol" required>
+                    <option value="" disabled selected>Seleccione su rol</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Mesero</option>
+                    <option value="3">Cajero</option>
+                </select>
+
+                <label for="email" class="labels">Email</label>
+                <input type="email" id="mail" placeholder="Correo electrónico" required>
+                <label for="password" class="labels">Contraseña</label>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <label for="phone" class="labels">Número</label>
+                <input type="tel" id="phone" placeholder="Teléfono de contacto" required>
+                <label for="address" class="labels">Dirección</label>
+                <input type="text" id="address" placeholder="Dirección" required>
+            </div>
+
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-registro">Registrarse</button>
+                <a href="login.html" class="btn btn-login">Login</a>
+            </div>
+
+            <div class="form-footer">
+                <a href="#">Política de privacidad</a>
+                <span>|</span>
+                <a href="#">Términos y condiciones</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chicken Biker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="split-container">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="left-panel">
+        <div class="branding-content">
+            <img src="../assets/img/logochicken.png" class="branding-logo" alt="Logo Chicken Biker">
+            <h1 class="branding-title">Bienvenido</h1>
+        </div>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="right-panel">
+
+        <div class="login-wrapper">
+
+            <h2 class="form-title">Inicia Sesión</h2>
+
+            <form class="login-form" id="loginForm">
+
+                <!-- USUARIO -->
+                <div class="input-group">
+                    <label for="user-email">Usuario o Email</label>
+                    <input 
+                        type="text" 
+                        id="user-email" 
+                        class="form-input" 
+                        placeholder="Ej: biker_01" 
+                        required
+                    >
+                </div>
+
+                <!-- CONTRASEÑA -->
+                <div class="input-group">
+
+                    <label for="user-pass">Contraseña</label>
+
+                    <div class="password-wrapper">
+
+                        <input 
+                            type="password" 
+                            id="user-pass" 
+                            class="form-input" 
+                            placeholder="********" 
+                            required
+                        >
+
+                        <span id="togglePassword" class="eye-icon"></span>
+
+                    </div>
+
+                </div>
+
+                <!-- BOTON LOGIN -->
+                <button type="submit" class="btn-login">
+                    Inicia Sesión
+                </button>
+
+                <!-- FOOTER -->
+                <div class="form-footer">
+
+                    <a href="#" class="forgot-link">
+                        ¿Olvidaste tu contraseña? 
+                        <span class="accent-link">Haz clic aquí</span>
+                    </a>
+
+                    <p class="form-subtitle">
+                        ¿No tienes cuenta?
+                        <a href="registro.html" class="accent-link">
+                            Regístrate
+                        </a>
+                    </p>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

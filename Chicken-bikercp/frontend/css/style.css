@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(#C52C26,#e67e22);
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+
+.split-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- PANEL IZQUIERDO --- */
+
+.left-panel {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* curva decorativa */
+
+.left-panel::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 200%;
+    height: 100%;
+
+    background: linear-gradient(135deg,#d94b2b,#e67e22,#f4b942);
+
+    border-radius: 50% / 50% 100% 0 0;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.branding-content {
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.branding-logo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.branding-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+}
+
+.branding-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* --- PANEL DERECHO --- */
+
+.right-panel {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.accent-link {
+    color: #C52C26;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.accent-link:hover {
+    text-decoration: underline;
+}
+
+/* --- FORMULARIO --- */
+
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    height: 50px;
+
+    padding-left: 15px;
+
+    color: #333;
+
+    border: 1px solid #777;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+::placeholder {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.form-input:focus,
+.form-input:hover {
+    border-color: #C52C26;
+
+    background-color: #FFFFFF;
+
+    box-shadow: 0 0 5px rgba(237, 24, 23, 0.1);
+}
+
+/* --- BOTÓN LOGIN --- */
+
+.btn-login {
+    display: block;
+
+    margin: 30px auto;
+
+    height: 55px;
+    width: 100%;
+
+    background: #d94b2b;
+
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 12px;
+
+    font-weight: 900;
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(237, 24, 23, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(237, 24, 23, 0.3);
+
+    background: #FCC415;
+
+    color: #333;
+}
+
+.btn-login:active {
+    transform: translateY(-1px);
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- PASSWORD --- */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.eye-icon {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    font-size: 1.3rem;
+
+    color: #777;
+
+    display: flex;
+
+    align-items: center;
+
+    transition: opacity 0.2s;
+
+    user-select: none;
+}
+
+.eye-icon:hover {
+    opacity: 0.8;
+}
+
+.password-wrapper .form-input {
+    padding-right: 50px;
+}
+
+/* --- FOOTER --- */
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+
+    .left-panel,
+    .right-panel {
+        flex: 1 1 100%;
+        padding: 40px;
+    }
+
+    .left-panel::after {
+        display: none;
+    }
+
+    .left-panel {
+        background: linear-gradient(to bottom, #FCC415, #C52C26);
+        color: #FFFFFF;
+    }
+
+    .branding-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .branding-title {
+        font-size: 2rem;
+    }
+
+}
+
+/* Estilo para que el textarea combine con tus inputs */
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #F5F5F5;
+    border: 1px solid #e1e5eb;
+   border-radius: 8px;
+    color: #383636;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    resize: vertical; /* Permite ajustar el alto pero no el ancho */
+}
+textarea:focus {
+    border-color: #da0d0d;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(247, 213, 23, 0.1);
+}

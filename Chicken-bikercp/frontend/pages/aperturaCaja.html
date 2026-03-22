@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apertura / Cierre de Caja - Chicken Biker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <form class="registro-form">
+            <h2>Caja</h2>
+            <div class="linea-decorativa"></div>
+
+            <div class="input-group">
+                <label for="fechaApertura" class="labels">Fecha Apertura</label>
+                <input type="date" id="fechaApertura" name="fechaApertura" required>
+
+                <label for="montoInicial" class="labels">Monto Inicial</label>
+                <input type="number" step="0.01" name="montoInicial" id="montoInicial" placeholder="0.00" required>
+
+                <label for="fechaCierre" class="labels">Fecha Cierre</label>
+                <input type="date" name="fechaCierre" id="fechaCierre">
+
+                <label for="montoFinalSistema" class="labels">Monto Final Sistema</label>
+                <input type="number" step="0.01" name="montoFinalSistema" id="montoFinalSistema" readonly>
+
+                <label for="montoFinalReal" class="labels">Monto Final Real</label>
+                <input type="number" step="0.01" name="montoFinalReal" id="montoFinalReal" placeholder="0.00">
+
+                <label for="diferencia" class="labels">Diferencia</label>
+                <input type="number" step="0.01" name="diferencia" id="diferencia" readonly>
+
+                <label for="estadoCierreCj" class="labels">Estado de Caja</label>
+                <select name="estadoCierreCj" id="estadoCierreCj" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">Abierta</option>
+                    <option value="2">Cerrada</option>
+                </select>
+
+                <label for="caja_id" class="labels">Caja</label>
+                <select name="caja_id" id="caja_id" required>
+                    <option value="" disabled selected>Seleccione la caja</option>
+                    <option value="1">Caja Principal</option>
+                </select>
+
+                <label for="usuarioOpen" class="labels">Usuario Apertura</label>
+                <input type="text" name="usuarioOpen" id="usuarioOpen" placeholder="ID Usuario" readonly>
+
+                <label for="usuarioClos" class="labels">Usuario Cierre</label>
+                <input type="text" name="usuarioClos" id="usuarioClos" placeholder="ID Usuario" readonly>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-registro">Guardar</button>
+                <a href="dashboard.html" class="btn btn-login">Volver</a>
+            </div>
+
+            <div class="form-footer">
+                <a href="#">Ayuda del sistema</a>
+                <span>|</span>
+                <a href="#">Reportar error</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

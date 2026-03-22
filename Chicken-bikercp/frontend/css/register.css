@@ -1,0 +1,252 @@
+/* --- Configuración Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fuente moderna y limpia */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Fondo de página gris muy claro para contrastar con el blanco del form */
+    background: linear-gradient(to right, #F7F6DC, #FFFCF0);
+    padding: 20px;
+    border-top: 15px solid;
+    border-image: linear-gradient(to right, #ED1817 0%, #f7d517 100%) 1;
+}
+
+/* --- Contenedor del Formulario --- */
+.registro-form {
+    width: 100%;
+    max-width: 480px;
+    /* Fondo BLANCO para suavizar la interacción */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    /* --- LÍNEA SUPERIOR DE DIVISIÓN CON EL GRADIENTE --- */
+    border-top: 15px solid;
+    border-image: linear-gradient(to right, #ED1817 0%, #f7d517 100%) 1;
+    border-bottom: 15px solid;
+    border-image: linear-gradient(to right, #ED1817 0%, #f7d517 100%) 1;
+}
+
+/* --- Título y Decoración (Estilo Plantilla) --- */
+.registro-form h2 {
+    color: #333; /* Texto oscuro sobre fondo blanco */
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.linea-decorativa {
+    width: 50px;
+    height: 5px;
+    background-color: #c81e00;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+/* --- Grupo de Entradas --- */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.labels {
+    text-align: left;
+    left: 10px;
+    top: 20px;
+
+
+}
+/* --- Estilo de los Inputs y Selects --- */
+input, select {
+    width: 100%;
+    padding: 14px 18px;
+    /* Fondo gris muy claro para los campos */
+    background-color: #F5F5F5;
+    /* Borde sutil */
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    color: #383636;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+/* --- Efecto Focus con el Naranja de Marca --- */
+input:focus, select:focus {
+    border-color: #da0d0d;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(247, 213, 23, 0.1);
+}
+
+/* --- Texto de Ayuda --- */
+.form-help {
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: left;
+}
+
+.form-help a {
+    /* El enlace usa el verde de la plantilla */
+    color: #00c896;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-help a:hover {
+    text-decoration: underline;
+}
+
+/* --- Grupo de Botones --- */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Botón Registro --- */
+.btn-registro {
+    background-color: #ED1817;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-registro:hover {
+    background-color: #ff2a29; /* Un rojo más vivo */
+    transform: translateY(-2px); /* Efecto de levante */
+    box-shadow: 0 4px 12px rgba(237, 24, 23, 0.4); /* Sombra con el color del botón */
+}
+
+.btn-registro:active {
+    transform: translateY(0); /* Efecto de presionar */
+}
+
+/* --- Botón Login (Estilo Claro) --- */
+.btn-login {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none; /* Quita el subrayado del <a> */
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.btn-login:hover {
+    background-color: #f8f9fa; /* Se aclara un poco */
+    color: #212529; /* Texto más oscuro para legibilidad */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+}
+
+/* --- Footer Legal --- */
+.form-footer {
+    margin-top: 35px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.form-footer a {
+    /* Los enlaces usan el ROJO de marca */
+    color: #ED1817;
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.2s;
+}
+
+.form-footer a:hover {
+    color: #f7d517; /* Hover con el naranja */
+    text-decoration: underline;
+}
+
+.form-footer span {
+    color: #ccc;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #F5F5F5;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    color: #383636;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+textarea:focus {
+    border-color: #da0d0d;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(247, 213, 23, 0.1);
+}
+
+/* Ajuste específico para el checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #ED1817; /* Color de marca para el check */
+}
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 520px) {
+    .registro-form {
+        padding: 30px 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
