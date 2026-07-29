@@ -79,6 +79,58 @@
   .section-head.center{text-align:center;margin-inline:auto;}
   .section-head.center .section-sub{margin-inline:auto;}
  
+/* Contenedor principal de la sección que alinea ambas partes */
+.hero__inner {
+  display: flex;
+  align-items: center; /* Centra verticalmente ambos lados */
+  justify-content: space-between; /* Empuja el texto a la izq y el video a la der */
+  gap: 40px; /* Espacio entre el texto y el video */
+  padding: 60px 0; /* Un poco de respiro arriba y abajo */
+}
+
+/* Lado izquierdo (Texto) */
+.hero__content {
+  flex: 1; /* Toma el espacio necesario */
+  max-width: 50%;
+}
+
+/* Lado derecho (Video) */
+.hero__media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido del contenedor hacia la derecha */
+}
+
+/* Estilos específicos para hacer el video más grande */
+.hero-video {
+  width: 100%; /* Hace que sea responsivo */
+  max-width: 500px; /* Aquí controlas qué tan grande lo quieres */
+  height: auto;
+  object-fit: contain;
+  border-radius: 20%;
+  pointer-events: none;
+  background-color: transparent;
+  /* Opcional: Un pequeño filtro de sombra para darle profundidad sobre ese fondo oscuro */
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); 
+}
+
+/* Ajuste Responsive para móviles (Media Query) */
+@media (max-width: 768px) {
+  .hero__inner {
+    flex-direction: column; /* Pila el texto arriba y el video abajo en móviles */
+    text-align: center;
+  }
+  
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__media {
+    justify-content: center;
+    margin-top: 30px;
+  }
+}
+
   /* ============ BUTTONS ============ */
   .btn{
     position:relative;overflow:hidden;

@@ -94,3 +94,24 @@
     });
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logoVideo = document.querySelector('.logo-video');
+  
+  if (logoVideo) {
+    // Asegura la reproducción tan pronto carga la vista
+    logoVideo.play().catch(error => {
+      console.warn("El navegador pausó el autoplay. Se intentará reanudar al interactuar.", error);
+      
+      // Si fue bloqueado, lo reanuda con el primer clic o toque que el usuario haga en la pantalla
+      const startVideoEvent = () => {
+        logoVideo.play();
+        document.removeEventListener('click', startVideoEvent);
+        document.removeEventListener('touchstart', startVideoEvent);
+      };
+      
+      document.addEventListener('click', startVideoEvent);
+      document.addEventListener('touchstart', startVideoEvent);
+    });
+  }
+});
