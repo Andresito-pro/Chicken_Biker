@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken Biker · Control de Mesas</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/mesas.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+
+    <!-- ============================= SIDEBAR ============================= -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <img src="../assets/img/logochicken.png" alt="Chicken Biker Logo">
+        <div class="logo-text">
+          <h2>Chicken Biker</h2>
+          <span>Point of Sale</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <span class="nav-label">Operación</span>
+        <a href="../pages/dashboard.html" class="nav-item" data-tooltip="Dashboard">
+          <i class="fa-solid fa-house"></i><span>Dashboard</span>
+        </a>
+        <a href="mesas.html" class="nav-item active" data-tooltip="Mesas">
+          <i class="fa-solid fa-chair"></i><span>Mesas</span>
+        </a>
+        <a href="#" class="nav-item" data-tooltip="Pedidos">
+          <i class="fa-solid fa-receipt"></i><span>Pedidos</span>
+        </a>
+
+        <span class="nav-label">Finanzas</span>
+        <a href="movimientoCaja.html" class="nav-item" data-tooltip="Caja">
+          <i class="fa-solid fa-cash-register"></i><span>Caja</span>
+        </a>
+        <a href="#" class="nav-item" data-tooltip="Recibos">
+          <i class="fa-solid fa-file-invoice"></i><span>Recibos</span>
+        </a>
+
+        <span class="nav-label">Administración</span>
+        <a href="rgProductos.html" class="nav-item" data-tooltip="Menú">
+          <i class="fa-solid fa-utensils"></i><span>Menú</span>
+        </a>
+        <a href="#" class="nav-item" data-tooltip="Reportes">
+          <i class="fa-solid fa-chart-line"></i><span>Reportes</span>
+        </a>
+        <a href="rgUsuarios.html" class="nav-item" data-tooltip="Usuarios">
+          <i class="fa-solid fa-users"></i><span>Usuarios</span>
+        </a>
+        <a href="#" class="nav-item" data-tooltip="Configuración">
+          <i class="fa-solid fa-gear"></i><span>Configuración</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="avatar">AR</div>
+          <div class="user-info">
+            <strong>Andrés Riaño</strong>
+            <span>Administrador</span>
+          </div>
+        </div>
+        <button class="logout-btn" title="Cerrar sesión">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ============================== MAIN =============================== -->
+    <div class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="greeting-block">
+            <h1>Mesas</h1>
+            <div class="greeting-meta">
+              <span id="activeCount">14 de 20 mesas activas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="cash-btn" id="cashToggleBtn" data-open="true">
+            <span class="cash-indicator"></span>
+            <span class="cash-label">Caja Abierta</span>
+          </button>
+          <button class="icon-btn" aria-label="Notificaciones">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <div class="topbar-avatar">AR</div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <main class="content">
+
+        <!-- HEADER DE ACCIONES Y FILTROS -->
+        <div class="tables-header-actions">
+          <div class="filter-pills" id="filterPills">
+            <button class="pill-filter active" data-status="all">
+              Todas <span class="badge">18</span>
+            </button>
+            <button class="pill-filter" data-status="disponible">
+              <span class="dot status-disponible"></span> Disponibles <span class="badge">7</span>
+            </button>
+            <button class="pill-filter" data-status="ocupada">
+              <span class="dot status-ocupada"></span> Ocupadas <span class="badge">7</span>
+            </button>
+            <button class="pill-filter" data-status="pendiente">
+              <span class="dot status-pendiente"></span> Esperando Pago <span class="badge">2</span>
+            </button>
+            <button class="pill-filter" data-status="inactiva">
+              <span class="dot status-inactiva"></span> Inhabilitadas <span class="badge">2</span>
+            </button>
+          </div>
+
+          <button class="btn-primary" id="btnAddTable">
+            <i class="fa-solid fa-plus"></i> Agregar Mesa
+          </button>
+        </div>
+
+        <!-- GRID DE MESAS -->
+        <section class="tables-grid" id="tablesGrid">
+          <!-- Generado dinámicamente mediante JS -->
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/mesas.js"></script>
+</body>
+</html>

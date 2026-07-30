@@ -1,0 +1,198 @@
+/* ==========================================================================
+   ESTILOS APARTADO DE MESAS - CHICKEN BIKER
+   ========================================================================== */
+
+/* Header de Filtros y Botón */
+.tables-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--text-soft);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-filter:hover {
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+.pill-filter.active {
+  background-color: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+}
+
+.pill-filter .badge {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* Dots para estados */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-disponible { background-color: #2E7D32; }
+.status-ocupada { background-color: var(--orange); }
+.status-pendiente { background-color: var(--red); }
+.status-inactiva { background-color: #9E9E9E; }
+
+/* Botón Agregar */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-main);
+  color: var(--white);
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(198, 40, 40, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(198, 40, 40, 0.35);
+}
+
+/* Grid de Tarjetas de Mesas */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.table-card {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.table-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header */
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.table-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Badges de estado dentro de las cards */
+.table-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.table-badge.disponible { background-color: #E8F5E9; color: #2E7D32; }
+.table-badge.ocupada { background-color: var(--cream-2); color: var(--orange); }
+.table-badge.pendiente { background-color: #FFEBEE; color: var(--red); }
+.table-badge.inactiva { background-color: #F5F5F5; color: #757575; }
+
+/* Detalles de la mesa */
+.table-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.table-details-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-details-item i {
+  width: 14px;
+  text-align: center;
+}
+
+/* Footer de la tarjeta */
+.table-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px border-dashed rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.table-price {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+/* Estado inactivo / deshabilitado */
+.table-card.disabled {
+  opacity: 0.6;
+  background-color: #FAFAFA;
+  cursor: not-allowed;
+}
